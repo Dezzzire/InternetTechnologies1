@@ -1,0 +1,71 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Навигация */
+.uk-navbar-container {
+    background-color: #222;
+}
+
+.uk-navbar-nav > li > a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.uk-navbar-nav > li > a:hover {
+    color: #1e87f0;
+}
+
+/* Сайдбар */
+.sidebar {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Таблицы */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Плавный скролл для iOS */
+}
+
+.uk-table {
+    min-width: 600px; /* Минимальная ширина таблицы */
+    border-collapse: collapse;
+}
+
+.uk-table th, .uk-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.uk-table th {
+    background-color: #1e87f0;
+    color: white;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .table-container {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 5px;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVN - Системы контроля версий</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/css/uikit.min.css" />
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .sidebar {
+            position: fixed;
+            width: 250px;
+            height: 100vh;
+            overflow-y: auto;
+            background: #f8f8f8;
+            padding: 20px;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pagination a {
+            padding: 10px 15px;
+            margin: 5px;
+            background: #ddd;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .pagination a:hover {
+            background: #bbb;
+        }
+        .footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                position: absolute;
+                width: 100%;
+                height: auto;
+                padding: 10px;
+                display: none;
+                background: #f8f8f8;
+            }
+            .content {
+                margin-left: 0;
+            }
+            .menu-toggle {
+                display: block;
+                padding: 10px;
+                background: #333;
+                color: #fff;
+                text-align: center;
+                cursor: pointer;
+            }
+            .uk-navbar-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .uk-navbar-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .uk-navbar-nav li {
+                margin: 5px;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = (sidebar.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-container">
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="git.html">Git</a></li>
+                    <li><a href="mercurial.html">Mercurial</a></li>
+                    <li><a href="svn.html">SVN</a></li>
+                    <li><a href="compare.html">Сравнение</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰ Меню</div>
+    <div class="sidebar">
+        <h3>SVN</h3>
+        <ul class="uk-nav uk-nav-default">
+            <li><a href="#about">О SVN</a></li>
+            <li><a href="#features">Особенности</a></li>
+            <li><a href="#commands">Основные команды</a></li>
+            <li><a href="#example">Пример использования</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1 id="about">Subversion (SVN)</h1>
+        <img src="svn.png" alt="SVN Logo" style="max-width: 200px; display: block; margin-bottom: 20px;">
+        <p>Apache Subversion (SVN) — это централизованная система контроля версий, популярная в корпоративной среде.</p>
+        
+        <h2 id="features">Основные особенности</h2>
+        <ul>
+            <li>Централизованное хранение кода</li>
+            <li>Поддержка истории изменений и резервных копий</li>
+            <li>Гранулированное управление доступом</li>
+        </ul>
+        
+        <h2 id="commands">Основные команды SVN</h2>
+        <ul>
+            <li><code>svn checkout [URL]</code> — клонировать репозиторий</li>
+            <li><code>svn commit -m "Сообщение"</code> — отправить изменения</li>
+            <li><code>svn update</code> — обновить локальную копию</li>
+        </ul>
+        
+        <h2 id="example">Пример использования</h2>
+        <pre><code>
+$ svn checkout http://example.com/repo
+$ cd repo
+$ svn add .
+$ svn commit -m "Первый коммит"
+        </code></pre>
+        
+        <div class="pagination">
+            <a href="index.html">1</a>
+            <a href="git.html">2</a>
+            <a href="mercurial.html">3</a>
+            <a href="svn.html" class="uk-active">4</a>
+            <a href="compare.html">5</a>
+            <a href="faq.html">6</a>
+        </div>
+    </div>
+    <div class="footer">
+        © 2025 ДЗ Технологии интернет
+    </div>
+</body>
+</html>
